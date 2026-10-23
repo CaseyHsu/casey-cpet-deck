@@ -1,0 +1,1670 @@
+{
+ "meta": {
+  "generated": "2026-07-31",
+  "survey": "全量 276 模板逐一渲染調查（n=4, desc 8 中文字）",
+  "render_success": "276/276",
+  "notes": [
+   "資料鍵 'children' 會導致 @antv/infographic SSR hang 住直到 10 秒 timeout（不報錯），hierarchy 家族實際應使用 'lists'。forge 應在送出前驗證資料鍵合法性。",
+   "supports_desc=false 的模板只渲染 title 與 label，使用者提供的 desc 會被靜默丟棄且無錯誤訊息。",
+   "所有模板的 foreignObject 內部一律為單層 <span>+純文字（巢深1），CSS 屬性全集 15 項，foreignObject→text 轉寫方案於全量驗證下成立。"
+  ]
+ },
+ "templates": {
+  "chart-bar-plain-text": {
+   "data_key": "values",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 10
+  },
+  "chart-column-simple": {
+   "data_key": "values",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "chart-line-plain-text": {
+   "data_key": "values",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 10
+  },
+  "chart-pie-compact-card": {
+   "data_key": "values",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "chart-pie-donut-compact-card": {
+   "data_key": "values",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "chart-pie-donut-pill-badge": {
+   "data_key": "values",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "chart-pie-donut-plain-text": {
+   "data_key": "values",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "chart-pie-pill-badge": {
+   "data_key": "values",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "chart-pie-plain-text": {
+   "data_key": "values",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "chart-wordcloud": {
+   "data_key": "values",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "chart-wordcloud-rotate": {
+   "data_key": "values",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "compare-binary-horizontal-badge-card-arrow": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-badge-card-fold": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-badge-card-vs": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 1
+  },
+  "compare-binary-horizontal-compact-card-arrow": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-compact-card-fold": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-compact-card-vs": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 1
+  },
+  "compare-binary-horizontal-simple-arrow": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-simple-fold": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-simple-vs": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 1
+  },
+  "compare-binary-horizontal-underline-text-arrow": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-underline-text-fold": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 2
+  },
+  "compare-binary-horizontal-underline-text-vs": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 1
+  },
+  "compare-hierarchy-left-right-circle-node-pill-badge": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 3,
+   "native_text_count": 0
+  },
+  "compare-hierarchy-left-right-circle-node-plain-text": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 3,
+   "native_text_count": 0
+  },
+  "compare-hierarchy-row-letter-card-compact-card": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "compare-hierarchy-row-letter-card-rounded-rect-node": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "compare-quadrant-quarter-circular": {
+   "data_key": "compares",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "compare-quadrant-quarter-simple-card": {
+   "data_key": "compares",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "compare-quadrant-simple-illus": {
+   "data_key": "compares",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "compare-swot": {
+   "data_key": "compares",
+   "supports_desc": false,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-branch-gradient-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 2,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-branch-gradient-circle-progress": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 2,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-branch-gradient-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 2,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-branch-gradient-lined-palette": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-branch-gradient-rounded-rect": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-level-gradient-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 2,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-level-gradient-circle-progress": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 2,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-level-gradient-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 2,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-level-gradient-lined-palette": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "hierarchy-mindmap-level-gradient-rounded-rect": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "hierarchy-structure": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "hierarchy-structure-mirror": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-curved-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-curved-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-curved-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-curved-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-curved-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-arrow-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-arrow-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-arrow-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-arrow-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-arrow-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-dashed-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-distributed-origin-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-distributed-origin-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-distributed-origin-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-distributed-origin-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-distributed-origin-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-tech-style-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-tech-style-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-tech-style-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-tech-style-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-bt-tech-style-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-curved-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-curved-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-curved-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-curved-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-curved-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-arrow-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-arrow-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-arrow-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-arrow-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-arrow-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-dashed-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-distributed-origin-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-distributed-origin-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-distributed-origin-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-distributed-origin-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-distributed-origin-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-curved-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-curved-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-curved-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-curved-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-curved-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-arrow-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-arrow-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-arrow-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-arrow-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-arrow-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-dashed-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-distributed-origin-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-distributed-origin-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-distributed-origin-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-distributed-origin-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-distributed-origin-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-tech-style-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-tech-style-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-tech-style-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-tech-style-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-lr-tech-style-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-curved-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-curved-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-curved-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-curved-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-curved-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-arrow-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-arrow-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-arrow-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-arrow-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-arrow-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-line-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-line-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-line-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-line-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-dashed-line-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-distributed-origin-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-distributed-origin-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-distributed-origin-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-distributed-origin-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-distributed-origin-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-tech-style-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-tech-style-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-tech-style-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-tech-style-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-rl-tech-style-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-tech-style-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-tech-style-capsule-item": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-tech-style-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-tech-style-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 8,
+   "native_text_count": 0
+  },
+  "hierarchy-tree-tech-style-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "list-column-done-list": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "list-column-simple-vertical-arrow": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "list-column-vertical-icon-arrow": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "list-grid-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-grid-candy-card-lite": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-grid-circular-progress": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-grid-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-grid-done-list": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "list-grid-horizontal-icon-arrow": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "list-grid-progress-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-grid-ribbon-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-grid-simple": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-pyramid-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 7,
+   "native_text_count": 0
+  },
+  "list-pyramid-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 7,
+   "native_text_count": 0
+  },
+  "list-pyramid-rounded-rect-node": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 4,
+   "native_text_count": 0
+  },
+  "list-row-circular-progress": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-row-horizontal-icon-arrow": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "list-row-horizontal-icon-line": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-row-simple-horizontal-arrow": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "list-row-simple-illus": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-sector-half-plain-text": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "list-sector-plain-text": {
+   "data_key": "lists",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "list-sector-simple": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-waterfall-badge-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-waterfall-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-zigzag-down-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-zigzag-down-simple": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-zigzag-up-compact-card": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "list-zigzag-up-simple": {
+   "data_key": "lists",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "quadrant-quarter-circular": {
+   "data_key": "compares",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "quadrant-quarter-simple-card": {
+   "data_key": "compares",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "quadrant-simple-illus": {
+   "data_key": "compares",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-circle-circular-progress": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-circle-icon-badge": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-lr-animated-badge-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-lr-animated-capsule": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-lr-animated-compact-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-lr-animated-simple-circle-node": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-lr-badge-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-lr-compact-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-lr-simple-circle-node": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-tb-animated-badge-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-tb-animated-capsule": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-tb-animated-compact-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-tb-animated-simple-circle-node": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-tb-badge-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-tb-compact-card": {
+   "data_key": "nodes",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "relation-dagre-flow-tb-simple-circle-node": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "relation-network-icon-badge": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "relation-network-simple-circle-node": {
+   "data_key": "nodes",
+   "supports_desc": false,
+   "foreign_object_count": 1,
+   "native_text_count": 0
+  },
+  "sequence-ascending-stairs-3d-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 12
+  },
+  "sequence-ascending-stairs-3d-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 12
+  },
+  "sequence-ascending-steps": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-circle-arrows-indexed-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-circular-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-circular-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-color-snake-steps-horizontal-icon-line": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-color-snake-steps-simple-illus": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-cylinders-3d-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-filter-mesh-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-filter-mesh-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-funnel-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-horizontal-zigzag-horizontal-icon-line": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-horizontal-zigzag-plain-text": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-horizontal-zigzag-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-horizontal-zigzag-simple-horizontal-arrow": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-horizontal-zigzag-simple-illus": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-horizontal-zigzag-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-animated-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-animated-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-animated-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-animated-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-dashed-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-dashed-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-dashed-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-dashed-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-compact-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-animated-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-animated-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-animated-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-animated-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-dashed-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-dashed-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-dashed-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-dashed-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-default-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-animated-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-animated-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-animated-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-animated-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-dashed-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-dashed-capsule-item": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-dashed-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-dashed-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-interaction-wide-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-mountain-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-pyramid-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-roadmap-vertical-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-roadmap-vertical-pill-badge": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-roadmap-vertical-plain-text": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 4
+  },
+  "sequence-roadmap-vertical-quarter-circular": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 8
+  },
+  "sequence-roadmap-vertical-quarter-simple-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-roadmap-vertical-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-roadmap-vertical-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-snake-steps-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-snake-steps-pill-badge": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-snake-steps-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-snake-steps-simple-illus": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-snake-steps-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-stairs-front-compact-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-stairs-front-pill-badge": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-stairs-front-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-steps-badge-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-steps-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-steps-simple-illus": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-timeline-done-list": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 4
+  },
+  "sequence-timeline-plain-text": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 0
+  },
+  "sequence-timeline-rounded-rect-node": {
+   "data_key": "sequences",
+   "supports_desc": false,
+   "foreign_object_count": 5,
+   "native_text_count": 4
+  },
+  "sequence-timeline-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  },
+  "sequence-timeline-simple-illus": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-zigzag-pucks-3d-indexed-card": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 8
+  },
+  "sequence-zigzag-pucks-3d-simple": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-zigzag-pucks-3d-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 4
+  },
+  "sequence-zigzag-steps-underline-text": {
+   "data_key": "sequences",
+   "supports_desc": true,
+   "foreign_object_count": 9,
+   "native_text_count": 0
+  }
+ }
+}

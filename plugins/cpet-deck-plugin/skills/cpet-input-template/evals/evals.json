@@ -1,0 +1,64 @@
+{
+  "skill_name": "cpet-input-template",
+  "_note": "依 MAINTENANCE.md「測試與驗證」：本技能是轉譯判斷，不做位元組回歸，以人工檢查為主。eval 3 是修訂模式，須在 eval 2 的輸出資料夾上接著跑（先完成 eval 2，保留其 input_template.md）。2026-10-17 補建：MAINTENANCE 與打包清單早已引用本檔，但從未進版控。",
+  "evals": [
+    {
+      "id": 1,
+      "name": "oral-request-initial",
+      "prompt": "下週三組會要報告我這個月的進度，大概 8 頁就好。內容是 SPMSM 的無差拍預測電流控制：先講為什麼傳統 PI 電流環在高速下頻寬不夠，再講無差拍的原理（要放電壓方程式那條離散化公式），然後是模擬結果（我有兩張 MATLAB 跑出來的響應圖，檔名 step_response.png 跟 thd_compare.png），最後講參數敏感度的問題還沒解決。幫我用實驗室模板做。",
+      "expected_output": "初次生成：先依 doc-coauthoring 共創內容（自動化 eval 中 Stage 1-2 可簡化），輸出 input_template.md 與 素材處理清單.md 兩份並停下來等確認；不直接建置 .pptx。",
+      "files": [],
+      "expectations": [
+        "輸出 input_template.md、素材處理清單.md、數據查核表.md 三份檔案，且停在確認點，沒有呼叫 cpet-yslai-pptx 建置",
+        "input_template.md 語法符合當下 cpet-yslai-pptx 的 input_template 規格（動態模式）或 references/translation-rules.md（快照模式），且決策摘要末尾標明採用哪一種模式",
+        "守住量化上限：每頁區塊 ≤3、單頁 bullet ≤6、頁大標顯示寬度 ≤20",
+        "離散化電壓方程式以公式區塊呈現且附 note",
+        "step_response.png、thd_compare.png 是既有圖，列在素材處理清單的 cpet-figure-prep 區，不是 cpet-infographic-forge",
+        "原理說明若需要新畫流程或架構示意圖，列在 cpet-infographic-forge 區，並以 PENDING: 佔位鍵留在 input_template.md"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "prose-draft-initial",
+      "prompt": "這是我寫好的會議紀錄，想直接轉成實驗室簡報給老師看，內容我已經確定了，不用再討論：\n\n本週完成三件事。第一，逆變器死區補償改用電流極性查表，實測 THD 從 6.8% 降到 3.1%。第二，DSP 中斷時序重排，控制迴路從 10 kHz 提升到 20 kHz，取樣延遲由 1.5 拍降為 1 拍。第三，完成 PCB 第二版 layout，已送廠，預計下週五回來。\n\n下週計畫：PCB 回來後先做空載測試，確認閘極驅動波形；再接馬達做額定負載測試。風險是新版散熱片尺寸改了，可能要重新評估溫升。\n\n比較表：死區補償前後的 THD、基本波幅值、最大電流誤差三項，前後兩欄。",
+      "expected_output": "使用者表明內容已定，doc-coauthoring 只需最小確認；轉譯成 input_template.md，比較表以表格區塊呈現，素材處理清單可能為空或只有新畫的示意圖。",
+      "files": [],
+      "expectations": [
+        "尊重「內容已確定」：沒有改寫使用者的數據或擅自增刪事項",
+        "死區補償前後比較以 table 區塊呈現，三列兩欄，數據與原文一致（THD 6.8% → 3.1%）",
+        "三件完成事項與下週計畫分頁或分區塊合理，沒有單頁塞超過量化上限",
+        "風險事項（散熱片尺寸變更）有保留，未被省略",
+        "決策摘要列出每頁的區塊選擇理由",
+        "數據查核表列出 6.8 %、3.1 %、10 kHz、20 kHz、1.5／1 拍等數字；THD 標為實測值；會議紀錄沒寫來源檔的列標「待填」並列入決策摘要，沒有推測來源"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "revision-mode",
+      "prompt": "（接續 eval 2 的資料夾，已有 input_template.md）老師說第二件事 DSP 中斷時序那段要多講一點，加一張時序示意圖說明為什麼延遲從 1.5 拍變 1 拍；另外比較表多加一欄「改善幅度」。其他不用動。",
+      "expected_output": "偵測到既有 input_template.md，進入修訂模式：整份重跑轉譯，但決策摘要只列本次改動；新增的時序示意圖走 cpet-infographic-forge 並更新素材處理清單。",
+      "files": [],
+      "expectations": [
+        "偵測到既有 input_template.md 並明確說明進入修訂模式",
+        "輸出的是完整的 input_template.md（整份重跑），不是只給局部 patch 或差異片段",
+        "決策摘要只列本次改動（時序圖、比較表新欄），沒有把全部頁面重列一次",
+        "時序示意圖列入素材處理清單的 cpet-infographic-forge 區，input_template.md 對應位置是 PENDING: 佔位鍵",
+        "比較表變成三欄，改善幅度數值由原數據正確推得（例如 THD 降低 3.7 個百分點或約 54%），未捏造數據",
+        "未被要求修改的頁面內容與 eval 2 的輸出一致",
+        "新增的改善幅度數值在數據查核表另開一列，kind 為 calculated，source 寫出算式"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "claim-check-after-build",
+      "prompt": "簡報建好了（deck.pptx），講稿在 talk.json。老師說第 3 頁寫 40 Nm、第 7 頁寫 42.5 Nm，看起來對不起來。幫我把全份簡報和講稿的數字都查一遍。",
+      "expected_output": "以既有數據查核表（沒有就先用 claim_check.py suggest 從 input_template.md 建骨架並請使用者補 kind/source）跑 claim_check.py check deck.pptx talk.json；說明 40 與 42.5 分別是命令值與實測值，指出未標明性質的位置並建議標註方式；不自行修改簡報。",
+      "files": [],
+      "expectations": [
+        "實際執行 claim_check.py check，並引用其 MISMATCH／UNLABELED 輸出",
+        "區分命令值與實測值，指出哪一頁缺少性質標註",
+        "沒有直接改 pptx；修改建議交給使用者或 cpet-deck-finalize 流程"
+      ]
+    }
+  ]
+}

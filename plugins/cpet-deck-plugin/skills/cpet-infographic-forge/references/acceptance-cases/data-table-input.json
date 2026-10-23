@@ -1,0 +1,15 @@
+{
+  "title": "電流估測方法比較",
+  "cols": ["Proposed", "LUT-based", "Reg.-based", "KKT-based", "FEM-based"],
+  "rows": ["Model basis", "Solver required", "Optimality", "Online cost", "Accuracy", "Robustness", "Implementation"],
+  "cells": [
+    ["混合模型", "查表", "正則化", "KKT條件", "有限元素"],
+    ["輕量迭代", "無", "迭代", "QP求解器", "FEM求解器"],
+    ["全域", "局部", "近似", "全域", "全域"],
+    ["中", "低", "中", "高", "極高"],
+    ["高", "中", "中高", "高", "高"],
+    ["高", "低", "中", "中", "高"],
+    ["中等", "簡單", "中等", "複雜", "極複雜"]
+  ],
+  "highlightCol": 0
+}

@@ -1,0 +1,25 @@
+{
+  "title": "電流估測誤差分析：絕對誤差 vs 相對誤差",
+  "panels": [
+    {
+      "label": "絕對誤差 (A)",
+      "series": [
+        {"name": "Proposed", "points": [{"x":0,"y":0.42},{"x":1,"y":0.38},{"x":2,"y":0.51},{"x":3,"y":0.35},{"x":4,"y":0.29},{"x":5,"y":0.33}]},
+        {"name": "Conventional LUT", "points": [{"x":0,"y":0.68},{"x":1,"y":0.72},{"x":2,"y":0.85},{"x":3,"y":0.61},{"x":4,"y":0.58},{"x":5,"y":0.64}]}
+      ],
+      "yAxis": {"min": 0, "max": 1.0, "unit": "A"},
+      "referenceLine": {"value": 0.5, "label": "全域 MAPE 門檻"},
+      "annotations": [{"x": 2, "y": 0.85, "label": "峰值誤差"}]
+    },
+    {
+      "label": "相對誤差 (%)",
+      "series": [
+        {"name": "Proposed", "points": [{"x":0,"y":2.1},{"x":1,"y":1.9},{"x":2,"y":2.6},{"x":3,"y":1.7},{"x":4,"y":1.4},{"x":5,"y":1.6}]},
+        {"name": "Conventional LUT", "points": [{"x":0,"y":4.3},{"x":1,"y":4.6},{"x":2,"y":5.4},{"x":3,"y":3.9},{"x":4,"y":3.7},{"x":5,"y":4.1}]}
+      ],
+      "yAxis": {"min": 0, "max": 6.0, "unit": "%"},
+      "referenceLine": {"value": 3.0, "label": "全域 MAPE 門檻"},
+      "annotations": [{"x": 2, "y": 5.4, "label": "峰值誤差"}]
+    }
+  ]
+}

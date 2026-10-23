@@ -1,0 +1,29 @@
+{
+  "skill_name": "cpet-talk-prep",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ECCE 口頭報告 15 分鐘含 Q&A，我試講講了 13 分半。幫我依現在的講稿算各頁時間，標出 #6、#11、#14、#20 的檢查點，然後告訴我要從哪裡刪句。",
+      "expected_output": "以 talk.json 跑 talk.py timing（90 與 105 wpm），列出檢查點開始時間，依 speech-writing.md 的原則提出刪句建議（不建議加快語速）。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "第 19 頁講稿第 [1] 句改成 For the same torque, the proposed method needs less current. 備忘錄、講稿版、語音稿哪些要跟著改？幫我處理。",
+      "expected_output": "改 talk.json，用 talk.py diff 列出重產清單；重產 notes.json 後經 cpet-deck-finalize（check→snapshot→derive notes→register）寫入，重產講稿版與 p19 文字稿；提醒語音需重新合成並由使用者試聽。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "把這份審稿意見整理成口頭報告的 Q&A，每題要有好唸的短答和不能說的話，還要做成講稿版的備用頁。",
+      "expected_output": "依 qa-template.md 整理欄位，短答放 talk.json 的 backup/other，talk.py deck 產出講稿版。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "幫我把第 9 頁的流程圖顏色改成跟論文一樣，然後重新加動畫。",
+      "expected_output": "不應觸發本技能（屬 cpet-deck-finalize／投影片編修）。",
+      "files": []
+    }
+  ]
+}

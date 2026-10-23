@@ -1,0 +1,21 @@
+{
+  "name": "cpet-infographic-forge",
+  "version": "1.0.0",
+  "description": "CPET/YS Lai Lab 簡報資訊圖產生器的執行時相依",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@antv/infographic": "0.2.19",
+    "@fontsource/inter": "5.3.0",
+    "js-yaml": "5.4.3",
+    "lucide-static": "1.31.0",
+    "playwright": "1.62.1",
+    "pngjs": "7.0.0"
+  },
+  "private": true,
+  "overrides": {
+    "source-map-js": "1.2.2"
+  }
+}

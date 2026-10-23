@@ -1,0 +1,29 @@
+{
+  "skill_name": "cpet-deck-finalize",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我的 ECCE 簡報 Final.pptx 昨天在 PowerPoint 裡自己又挪了幾個框，現在要把第 19 頁右卡第二點改成 command 跟 measured 兩組數字，改之前先幫我備份，改完無動畫版也要跟著更新。",
+      "expected_output": "先跑 deck_guard check（偵測到手改則列出並請使用者確認），snapshot 到 99_封存，只改第 19 頁，register，derive noanim 重產無動畫版並 register --role derived。不直接用 python-pptx 覆寫原檔。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "請照講稿的 [n] 點擊標記幫 Final.pptx 第 2、4–20 頁加動畫，全部用出現，卡片的框和文字一起出來，深藍結論橫條最後出現。第 9 頁進頁先顯示問句，按第一下出現答句，第二下兩句一起消失。",
+      "expected_output": "寫出 anim spec（第 9 頁 EntryPrompt/EntryPrompt2 的出現與消失分在不同點擊），anim.py inject 後 check 0 問題、每頁點擊數與講稿一致，並提醒使用者在 PowerPoint 實機播放。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "幫我用實驗室模板做一份週報簡報，主題是 SPMSM 無差拍電流控制，我還沒有寫 input_template。",
+      "expected_output": "不應觸發本技能（應走 cpet-input-template）。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Final.pptx 現在開在 PowerPoint 裡，你先把第 10、11 頁的備忘錄講稿換成新版。",
+      "expected_output": "deck_guard check 回 3（LOCKED），停下請使用者關檔；不得另存他名。關檔後才以 derive.py notes 寫入並 register。",
+      "files": []
+    }
+  ]
+}

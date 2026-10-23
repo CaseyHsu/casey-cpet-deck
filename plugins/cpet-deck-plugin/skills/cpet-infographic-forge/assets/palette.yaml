@@ -1,0 +1,73 @@
+# =============================================================
+# palette.yaml — cpet-infographic-forge 配色定義 v0.1（定案）
+# =============================================================
+#
+# 兩組色票分屬不同性質，來源可信度不同，使用前請注意：
+#
+# cpet-brand：從 assets/template.pptx 實體檔案交叉驗證得出
+#   （theme1.xml clrScheme 正式定義 + slideMaster1.xml 實際
+#   使用色 + cpet-yslai-pptx/SKILL.md 文字定義三方比對一致）。
+#   非憑空指定，可信度最高，正式場合／投稿簡報配圖優先採用。
+#
+# cpet-vivid：延伸自「Agent Runtime」案例驗證過的多色語意
+#   分組邏輯（藍→紫→青→綠→磚紅），為 forge 提案配色，非
+#   cpet-yslai-pptx 官方色系。商業簡報、對外提案、產業報告
+#   等鮮明風格場合使用。cpet-yslai-pptx 簡報視覺風格未來若
+#   調整，此組配色可能隨之修訂，屬於暫定狀態下的先行版本。
+
+cpet-brand:
+  description: "官方深藍系，正式／投稿／口試等場合"
+  source: "template.pptx theme1.xml + slideMaster1.xml 交叉驗證"
+  colors:
+    - hex: "#003781"
+      name: navy
+      usage: "表頭底色、母片主色（母片實際使用，SKILL.md表格章節明載）"
+    - hex: "#333399"
+      name: accent-primary
+      usage: "主題強調色 accent2（theme1.xml clrScheme 正式定義）"
+    - hex: "#0066CC"
+      name: mid-blue
+      usage: "中藍（slideMaster1.xml 實際使用；SKILL.md文字未載，本次查證新增）"
+    - hex: "#49238D"
+      name: accent-purple
+      usage: "紫，次要強調（slideMaster1.xml 實際使用；SKILL.md文字未載，本次查證新增）"
+    - hex: "#9B423D"
+      name: subtitle-brown
+      usage: "副標／物理意義標籤色（SKILL.md定義，母片交叉驗證一致）"
+  # 以下為 SKILL.md 定義但屬「語意色」而非可輪替的主色票，
+  # 供 forge 產出的圖表若需呼應簡報既有語意時對照使用，
+  # 不建議直接放入 palette 的色票輪替序列
+  semantic_reference:
+    title_blue: "#0000FF"
+    body_text: "#1F1F6E"
+    section_current: "#C00000"
+    takeaway_text: "#2E6010"
+    takeaway_bg: "#E2EFDA"
+    table_header: "#003781"
+    table_row_bg: "#DCE6F1"
+    table_border: "#8EA9C9"
+
+cpet-vivid:
+  description: "商業鮮明多色，對外提案／產業報告／概念性視覺化"
+  source: "forge 提案配色，延伸自 Agent Runtime 案例驗證的階段式語意分組"
+  status: "先行版本，待 cpet-yslai-pptx 視覺風格調整後可能修訂"
+  colors:
+    - hex: "#2E5AAC"
+      name: stage-blue
+      usage: "第一階段／目標類（對應淡色底 #EAF0FB）"
+    - hex: "#6B4FA0"
+      name: stage-purple
+      usage: "第二階段／推理規劃類（對應淡色底 #F1EDF8）"
+    - hex: "#0E7C7B"
+      name: stage-teal
+      usage: "第三階段／執行工具類（對應淡色底 #E6F3F2）"
+    - hex: "#2F8F5B"
+      name: stage-green
+      usage: "第四階段／記憶觀察類（對應淡色底 #EAF6EE）"
+    - hex: "#C0553A"
+      name: stage-red-orange
+      usage: "最終結果／警示類（對應淡色底 #FBEEEA）"
+  accent:
+    hex: "#F5941E"
+    name: highlight-orange
+    usage: "重點強調框、星號標記，跨兩組配色共用"

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 448" font-family="Noto Sans CJK TC, sans-serif">
+  <!-- 無全畫布背景矩形：留白處保持透明 -->
+  <text x="510" y="47.6" text-anchor="middle" font-size="30" font-weight="900" fill="#2E5AAC">電流估測方法比較</text>
+  <rect x="0" y="70" width="320" height="64" fill="#2E5AAC"/>
+    <rect x="320" y="70" width="130" height="64" fill="#C96A0E"/>
+    <text x="385" y="109.735" text-anchor="middle" font-size="22.1" font-weight="800" fill="#FFFFFF">Proposed</text>
+    <rect x="452" y="70" width="130" height="64" fill="#2E5AAC"/>
+    <text x="517" y="109.53666666666666" text-anchor="middle" font-size="21.5" font-weight="800" fill="#FFFFFF">LUT-based</text>
+    <rect x="584" y="70" width="130" height="64" fill="#2E5AAC"/>
+    <text x="649" y="108.783" text-anchor="middle" font-size="19.4" font-weight="800" fill="#FFFFFF">Reg.-based</text>
+    <rect x="716" y="70" width="130" height="64" fill="#2E5AAC"/>
+    <text x="781" y="109.53666666666666" text-anchor="middle" font-size="21.5" font-weight="800" fill="#FFFFFF">KKT-based</text>
+    <rect x="848" y="70" width="130" height="64" fill="#2E5AAC"/>
+    <text x="913" y="109.53666666666666" text-anchor="middle" font-size="21.5" font-weight="800" fill="#FFFFFF">FEM-based</text>
+  
+    <rect x="0" y="136" width="320" height="40" fill="#F7F9FC"/>
+    <text x="12" y="163.28" font-size="20.8" font-weight="700" fill="#2E5AAC">Model basis</text>
+      <rect x="320" y="136" width="130" height="40" fill="#EAF0FC"/>
+      <text x="385" y="162.825" text-anchor="middle" font-size="19.5" font-weight="700" fill="#C96A0E">混合模型</text>
+      <rect x="452" y="136" width="130" height="40" fill="#F7F9FC"/>
+      <text x="517" y="162.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">查表</text>
+      <rect x="584" y="136" width="130" height="40" fill="#F7F9FC"/>
+      <text x="649" y="162.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">正則化</text>
+      <rect x="716" y="136" width="130" height="40" fill="#F7F9FC"/>
+      <text x="781" y="162.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">KKT條件</text>
+      <rect x="848" y="136" width="130" height="40" fill="#F7F9FC"/>
+      <text x="913" y="162.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">有限元素</text>
+    <rect x="0" y="178" width="320" height="40" fill="#FFFFFF"/>
+    <text x="12" y="205.28" font-size="20.8" font-weight="700" fill="#2E5AAC">Solver required</text>
+      <rect x="320" y="178" width="130" height="40" fill="#EAF0FC"/>
+      <text x="385" y="204.825" text-anchor="middle" font-size="19.5" font-weight="700" fill="#C96A0E">輕量迭代</text>
+      <rect x="452" y="178" width="130" height="40" fill="#FFFFFF"/>
+      <text x="517" y="204.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">無</text>
+      <rect x="584" y="178" width="130" height="40" fill="#FFFFFF"/>
+      <text x="649" y="204.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">迭代</text>
+      <rect x="716" y="178" width="130" height="40" fill="#FFFFFF"/>
+      <text x="781" y="204.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">QP求解器</text>
+      <rect x="848" y="178" width="130" height="40" fill="#FFFFFF"/>
+      <text x="913" y="204.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">FEM求解器</text>
+    <rect x="0" y="220" width="320" height="40" fill="#F7F9FC"/>
+    <text x="12" y="247.28" font-size="20.8" font-weight="700" fill="#2E5AAC">Optimality</text>
+      <rect x="320" y="220" width="130" height="40" fill="#EAF0FC"/>
+      <text x="385" y="246.825" text-anchor="middle" font-size="19.5" font-weight="700" fill="#C96A0E">全域</text>
+      <rect x="452" y="220" width="130" height="40" fill="#F7F9FC"/>
+      <text x="517" y="246.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">局部</text>
+      <rect x="584" y="220" width="130" height="40" fill="#F7F9FC"/>
+      <text x="649" y="246.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">近似</text>
+      <rect x="716" y="220" width="130" height="40" fill="#F7F9FC"/>
+      <text x="781" y="246.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">全域</text>
+      <rect x="848" y="220" width="130" height="40" fill="#F7F9FC"/>
+      <text x="913" y="246.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">全域</text>
+    <rect x="0" y="262" width="320" height="40" fill="#FFFFFF"/>
+    <text x="12" y="289.28" font-size="20.8" font-weight="700" fill="#2E5AAC">Online cost</text>
+      <rect x="320" y="262" width="130" height="40" fill="#EAF0FC"/>
+      <text x="385" y="288.825" text-anchor="middle" font-size="19.5" font-weight="700" fill="#C96A0E">中</text>
+      <rect x="452" y="262" width="130" height="40" fill="#FFFFFF"/>
+      <text x="517" y="288.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">低</text>
+      <rect x="584" y="262" width="130" height="40" fill="#FFFFFF"/>
+      <text x="649" y="288.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">中</text>
+      <rect x="716" y="262" width="130" height="40" fill="#FFFFFF"/>
+      <text x="781" y="288.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">高</text>
+      <rect x="848" y="262" width="130" height="40" fill="#FFFFFF"/>
+      <text x="913" y="288.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">極高</text>
+    <rect x="0" y="304" width="320" height="40" fill="#F7F9FC"/>
+    <text x="12" y="331.28" font-size="20.8" font-weight="700" fill="#2E5AAC">Accuracy</text>
+      <rect x="320" y="304" width="130" height="40" fill="#EAF0FC"/>
+      <text x="385" y="330.825" text-anchor="middle" font-size="19.5" font-weight="700" fill="#C96A0E">高</text>
+      <rect x="452" y="304" width="130" height="40" fill="#F7F9FC"/>
+      <text x="517" y="330.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">中</text>
+      <rect x="584" y="304" width="130" height="40" fill="#F7F9FC"/>
+      <text x="649" y="330.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">中高</text>
+      <rect x="716" y="304" width="130" height="40" fill="#F7F9FC"/>
+      <text x="781" y="330.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">高</text>
+      <rect x="848" y="304" width="130" height="40" fill="#F7F9FC"/>
+      <text x="913" y="330.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">高</text>
+    <rect x="0" y="346" width="320" height="40" fill="#FFFFFF"/>
+    <text x="12" y="373.28" font-size="20.8" font-weight="700" fill="#2E5AAC">Robustness</text>
+      <rect x="320" y="346" width="130" height="40" fill="#EAF0FC"/>
+      <text x="385" y="372.825" text-anchor="middle" font-size="19.5" font-weight="700" fill="#C96A0E">高</text>
+      <rect x="452" y="346" width="130" height="40" fill="#FFFFFF"/>
+      <text x="517" y="372.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">低</text>
+      <rect x="584" y="346" width="130" height="40" fill="#FFFFFF"/>
+      <text x="649" y="372.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">中</text>
+      <rect x="716" y="346" width="130" height="40" fill="#FFFFFF"/>
+      <text x="781" y="372.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">中</text>
+      <rect x="848" y="346" width="130" height="40" fill="#FFFFFF"/>
+      <text x="913" y="372.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">高</text>
+    <rect x="0" y="388" width="320" height="40" fill="#F7F9FC"/>
+    <text x="12" y="415.28" font-size="20.8" font-weight="700" fill="#2E5AAC">Implementation</text>
+      <rect x="320" y="388" width="130" height="40" fill="#EAF0FC"/>
+      <text x="385" y="414.825" text-anchor="middle" font-size="19.5" font-weight="700" fill="#C96A0E">中等</text>
+      <rect x="452" y="388" width="130" height="40" fill="#F7F9FC"/>
+      <text x="517" y="414.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">簡單</text>
+      <rect x="584" y="388" width="130" height="40" fill="#F7F9FC"/>
+      <text x="649" y="414.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">中等</text>
+      <rect x="716" y="388" width="130" height="40" fill="#F7F9FC"/>
+      <text x="781" y="414.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">複雜</text>
+      <rect x="848" y="388" width="130" height="40" fill="#F7F9FC"/>
+      <text x="913" y="414.825" text-anchor="middle" font-size="19.5" font-weight="500" fill="#3A4460">極複雜</text>
+  <rect x="320" y="70" width="130" height="378" fill="none" stroke="#C96A0E" stroke-width="2.5"/>
+</svg>

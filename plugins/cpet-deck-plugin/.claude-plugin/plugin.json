@@ -1,0 +1,11 @@
+{
+  "name": "cpet-deck-plugin",
+  "displayName": "CPET 簡報生成產線",
+  "version": "1.3.1",
+  "description": "CPET / YS Lai Lab 實驗室簡報生成工作流：素材轉譯與數據查核、簡報組裝（含大會官方模板）、資訊圖生成、既有圖片與 .fig 前處理、定稿後動畫與版本管理、講稿與 Q&A 六技能鏈",
+  "author": {
+    "name": "Casey"
+  },
+  "license": "MIT",
+  "keywords": ["cpet", "簡報", "pptx", "infographic", "實驗室簡報", "講稿", "口頭報告"]
+}

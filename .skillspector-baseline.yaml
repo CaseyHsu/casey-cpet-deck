@@ -1,0 +1,97 @@
+# SkillSpector baseline — casey-cpet-deck（cpet-deck-plugin 1.3.1）
+# 產生：2026-10-23，SkillSpector 2.12.0，--no-llm，掃描對象為 1.3.1 公開版的乾淨目錄。
+# 收錄已逐筆人工確認為誤判或預期行為的項目；不收 baseline 檔自身的 AE4／AS3（帶 --baseline 掃描時本檔不受檢）。
+# 注意：指紋含檔案內容與行號，修改被收錄的檔案後必須重新產生並逐筆核對。
+# 使用：skillspector scan <repo> --no-llm --baseline .skillspector-baseline.yaml
+version: 2
+scanner_version: 2.12.0
+rules: []
+fingerprints:
+- hash: sha256:0f6a2bcd48b3904269f98e346b860cf191615de4bc68febfd077d8809aa08fe7
+  rule_id: AE4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/SKILL.md
+  reason: 誤判（2026-10-22 以 unicodedata 逐字元重新檢查）：檔內無零寬字元、bidi 控制字元或其他 Unicode 格式字元（Cf）；非 ASCII 為中文、全形標點、工程單位與數學符號；input_template.docx 另有 1 個 pandoc 產生的不換行空白（U+00A0）。
+- hash: sha256:3a39c71b7a967f3055f29cef4d234c74cc4734a40150351f020a126ffa495ba9
+  rule_id: AE4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/assets/input-templates/input_template.docx!/word/document.xml
+  reason: 誤判（2026-10-22 以 unicodedata 逐字元重新檢查）：檔內無零寬字元、bidi 控制字元或其他 Unicode 格式字元（Cf）；非 ASCII 為中文、全形標點、工程單位與數學符號；input_template.docx 另有 1 個 pandoc 產生的不換行空白（U+00A0）。
+- hash: sha256:ebadee25b25b9b193f56d8c5168333c331d7012306afd9ca08b0559e0867df52
+  rule_id: AE4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/assets/input-templates/input_template.md
+  reason: 誤判（2026-10-22 以 unicodedata 逐字元重新檢查）：檔內無零寬字元、bidi 控制字元或其他 Unicode 格式字元（Cf）；非 ASCII 為中文、全形標點、工程單位與數學符號；input_template.docx 另有 1 個 pandoc 產生的不換行空白（U+00A0）。
+- hash: sha256:15969b1167e86e598277251d09c6f9a49e9c6288ae9329d4ec6c610a7327aaa1
+  rule_id: AE4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/assets/input-templates/input_template.tex
+  reason: 誤判（2026-10-22 以 unicodedata 逐字元重新檢查）：檔內無零寬字元、bidi 控制字元或其他 Unicode 格式字元（Cf）；非 ASCII 為中文、全形標點、工程單位與數學符號；input_template.docx 另有 1 個 pandoc 產生的不換行空白（U+00A0）。
+- hash: sha256:f8a706007a8a6c18995f5a2e12563d1f06eca55a5f0ec9f668f1cf5a9d819f0f
+  rule_id: AE4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/references/lab-style-conventions.md
+  reason: 誤判（2026-10-22 以 unicodedata 逐字元重新檢查）：檔內無零寬字元、bidi 控制字元或其他 Unicode 格式字元（Cf）；非 ASCII 為中文、全形標點、工程單位與數學符號；input_template.docx 另有 1 個 pandoc 產生的不換行空白（U+00A0）。
+- hash: sha256:9c10e84c7c40e5e45a3d2b6723c7d915928ca441a95337648c36a3fcc4568e2b
+  rule_id: AST7
+  file: plugins/cpet-deck-plugin/skills/cpet-figure-prep/scripts/fig_extract.py
+  reason: 誤判（2026-10-22 確認）：fig_extract.py 以 getattr 讀取 scipy.io.loadmat 回傳結構的欄位（欄位名來自該物件自身的 _fieldnames），不涉及任意屬性存取或程式執行。
+- hash: sha256:bb65a30effb8a58c541eb2b13ac3da0c72de5d815c940627fd6cdd3f7fe8f37f
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-figure-prep/scripts/figprep.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:4952d7d08bcef86ea361da92b9bed2be83c3376c30087bce71607b4fd842ca31
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-infographic-forge/scripts/check-font-coverage.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:7e5af9223f47614c4bc5a8a56100f9e466cdbbec4278ee1fecb7961811b18820
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-infographic-forge/scripts/foreignobject-to-text.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:09657feff57c89d550953a08ec096cb970a15d87f574bd1a2cb0c23458ddf142
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-infographic-forge/scripts/measure-text.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:4cfedf89b029a171b1e42e8c002cb08f669637a1485b53b65d055df76ee3e509
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-talk-prep/scripts/talk.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:7c07c5a6473070fcf54e243e80d7cc9ea154302f61a6abfc087356daaceadfc4
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-talk-prep/scripts/talk.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:c26dd09d8445165cceb0585a579e35c7866abf78df0511670be376f950f42b9f
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/scripts/extract_legacy.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:7d46f4d7f245cd27503a04e7dc77bace044eb1e5317f275977209f052d79f56b
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/scripts/extract_legacy.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:29ed3780873827f98e8c71a698dfd69059807c476a9e099768747a4ef056ad1f
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/scripts/render_eq.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:08bafb63c6824982808f5ef805a26d085ca0b3c0f72c41499206ae62d8a8e6a7
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/scripts/render_eq.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:4636bd55d614aa1dc92dfca690438b6d031d1558f8fae8e127402503629d098e
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/scripts/schema_check.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:32ed6f6b8cf9bc745a4251a2cd56c89aa631b067e7cd44299e00cb029d7c76d2
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/tests/test_v211.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:f6be923a8337e9eb2e62f23101c85f2b4952edfb47b5913c2eea3e3a47e728ab
+  rule_id: AST4
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/tests/test_v211.py
+  reason: 預期行為（2026-10-17 計畫§3；2026-10-22 新增項同樣逐筆確認）：以固定 argv 清單呼叫外部工具（soffice／fc-match／pdflatex／pdftoppm／xmllint／sys.executable 執行本技能 build_deck.py），無 shell=True，使用者提供的路徑僅作為獨立 argv 元素。
+- hash: sha256:138be1e76568b63f3273d564cf68c4ac2f53f8268dd265296069c3bb3209b50c
+  rule_id: EA3
+  file: THIRD-PARTY-NOTICES.md
+  reason: 誤判（2026-10-23 核對）：命中的是 THIRD-PARTY-NOTICES.md 照錄的 MIT／ISC 授權條文（"INCLUDING BUT NOT LIMITED TO"），屬法律文字，不是技能的行為描述，也不會被技能載入。
+- hash: sha256:683556172ccb6bd194971282cbf38e55a6ec25683df7cb753e98909278418426
+  rule_id: SC9
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/assets/template.pptx!/ppt/media/image2.svg
+  reason: 誤判（2026-10-22 重新核對）：template.pptx 內 110 KB SVG 只包一張 data:image/png;base64 圖片，無 <script>、on* 事件、foreignObject、外部 http 連結或 javascript:；唯一非 data 的 xlink:href 為檔內參照
+- hash: sha256:05383f217ed90b6f53cb40c00f9687d5e6516035d3b3978cf7b251abcb38a636
+  rule_id: TM1
+  file: plugins/cpet-deck-plugin/skills/cpet-yslai-pptx/scripts/full_qa.sh
+  reason: 誤判（2026-10-22 重新核對）：full_qa.sh 第 119 行 rm -f 只刪 QA 自己的輸出（$OUTDIR/$BASE.pdf 與 slide-*.jpg/png），$OUTDIR 預設為簡報旁的 qa_<簡報名>/，路徑皆加引號、萬用字元限定 slide-* 前綴。

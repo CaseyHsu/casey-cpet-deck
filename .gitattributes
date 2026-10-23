@@ -1,0 +1,5 @@
+# 一律以 LF 取出：SkillSpector baseline 的指紋含檔案內容，CRLF 取出會讓指紋對不上
+* text=auto eol=lf
+*.pptx binary
+*.docx binary
+*.png binary

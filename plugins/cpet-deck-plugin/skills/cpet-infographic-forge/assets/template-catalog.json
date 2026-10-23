@@ -1,0 +1,992 @@
+{
+  "meta": {
+    "measured_at": "2026-07-31",
+    "engine": "@antv/infographic",
+    "method": "每家族取代表模板，以 3/5/8 項分別渲染取得 viewBox 實測長寬比；v2修正：slot建議與偏差改為逐項目數各自計算，不再用單一代表值套用全家族",
+    "total_families": 40,
+    "fit_gate": "padding_ratio > threshold(預設0.25) 觸發告警並查 alternatives",
+    "usage_note": "查詢時務必依實際 data 項目數選用對應 per_item_count 內的建議，不可跨項目數套用（e2e測試已證實同家族不同項目數偏差可能差異達6倍）"
+  },
+  "slots": {
+    "full": {
+      "ar": 2.31,
+      "desc": "figure 單圖・無 takeaway",
+      "box": "12.57 x 5.45 in",
+      "px_200dpi": "2514x1090"
+    },
+    "full-tw": {
+      "ar": 2.63,
+      "desc": "figure 單圖・有 takeaway",
+      "box": "12.57 x 4.78 in",
+      "px_200dpi": "2514x956"
+    },
+    "quad": {
+      "ar": 2.94,
+      "desc": "figure 四圖 2x2・有 takeaway",
+      "box": "6.16 x 2.09 in",
+      "px_200dpi": "1232x418"
+    },
+    "half": {
+      "ar": 1.29,
+      "desc": "figure 二圖並排・有 takeaway",
+      "box": "6.16 x 4.78 in",
+      "px_200dpi": "1232x956"
+    },
+    "twocol": {
+      "ar": 1.18,
+      "desc": "two_col 右側圖",
+      "box": "6.11 x 5.18 in",
+      "px_200dpi": "1222x1036"
+    }
+  },
+  "families": {
+    "chart-bar": {
+      "representative_template": "chart-bar-plain-text",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.03,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.031
+        },
+        "5": {
+          "aspect_ratio": 2.31,
+          "recommended_slot": "full",
+          "fit_deviation": 0
+        },
+        "8": {
+          "aspect_ratio": 1.71,
+          "recommended_slot": "half",
+          "fit_deviation": 0.326
+        }
+      },
+      "stability": "moderate",
+      "drift": "heightens"
+    },
+    "chart-column": {
+      "representative_template": "chart-column-simple",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 0.82,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.439
+        },
+        "5": {
+          "aspect_ratio": 1.34,
+          "recommended_slot": "half",
+          "fit_deviation": 0.039
+        },
+        "8": {
+          "aspect_ratio": 2.12,
+          "recommended_slot": "full",
+          "fit_deviation": 0.09
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "chart-line": {
+      "representative_template": "chart-line-plain-text",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.17,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.009
+        },
+        "5": {
+          "aspect_ratio": 1.77,
+          "recommended_slot": "full",
+          "fit_deviation": 0.305
+        },
+        "8": {
+          "aspect_ratio": 2.66,
+          "recommended_slot": "full-tw",
+          "fit_deviation": 0.011
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "chart-pie": {
+      "representative_template": "chart-pie-plain-text",
+      "variant_count": 6,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.65,
+          "recommended_slot": "half",
+          "fit_deviation": 0.279
+        },
+        "5": {
+          "aspect_ratio": 1.65,
+          "recommended_slot": "half",
+          "fit_deviation": 0.279
+        },
+        "8": {
+          "aspect_ratio": 1.65,
+          "recommended_slot": "half",
+          "fit_deviation": 0.279
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "chart-wordcloud": {
+      "representative_template": "chart-wordcloud-rotate",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.37,
+          "recommended_slot": "half",
+          "fit_deviation": 0.062
+        },
+        "5": {
+          "aspect_ratio": 1.09,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.083
+        },
+        "8": {
+          "aspect_ratio": 1.11,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.063
+        }
+      },
+      "stability": "moderate",
+      "drift": "heightens"
+    },
+    "compare-binary": {
+      "representative_template": "compare-binary-horizontal-simple-fold",
+      "variant_count": 12,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.99,
+          "recommended_slot": "full",
+          "fit_deviation": 0.161
+        },
+        "5": {
+          "aspect_ratio": 1.99,
+          "recommended_slot": "full",
+          "fit_deviation": 0.161
+        },
+        "8": {
+          "aspect_ratio": 1.99,
+          "recommended_slot": "full",
+          "fit_deviation": 0.161
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "compare-hierarchy": {
+      "representative_template": "compare-hierarchy-left-right-circle-node-pill-badge",
+      "variant_count": 4,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 2.38,
+          "recommended_slot": "full",
+          "fit_deviation": 0.03
+        },
+        "5": {
+          "aspect_ratio": 2.38,
+          "recommended_slot": "full",
+          "fit_deviation": 0.03
+        },
+        "8": {
+          "aspect_ratio": 2.38,
+          "recommended_slot": "full",
+          "fit_deviation": 0.03
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "compare-quadrant": {
+      "representative_template": "compare-quadrant-quarter-simple-card",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 0.92,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.283
+        },
+        "5": {
+          "aspect_ratio": 0.92,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.283
+        },
+        "8": {
+          "aspect_ratio": 0.92,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.283
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "compare-swot": {
+      "representative_template": "compare-swot",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.64,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.238
+        },
+        "5": {
+          "aspect_ratio": 3.64,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.238
+        },
+        "8": {
+          "aspect_ratio": 3.13,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.065
+        }
+      },
+      "stability": "moderate",
+      "drift": "heightens"
+    },
+    "hierarchy-mindmap": {
+      "representative_template": "hierarchy-mindmap-branch-gradient-lined-palette",
+      "variant_count": 10,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.52,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.197
+        },
+        "5": {
+          "aspect_ratio": 2.58,
+          "recommended_slot": "full-tw",
+          "fit_deviation": 0.019
+        },
+        "8": {
+          "aspect_ratio": 2.04,
+          "recommended_slot": "full",
+          "fit_deviation": 0.132
+        }
+      },
+      "stability": "moderate",
+      "drift": "heightens"
+    },
+    "hierarchy-structure": {
+      "representative_template": "hierarchy-structure",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 0.71,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.662
+        },
+        "5": {
+          "aspect_ratio": 0.46,
+          "recommended_slot": "twocol",
+          "fit_deviation": 1.565
+        },
+        "8": {
+          "aspect_ratio": 0.3,
+          "recommended_slot": "twocol",
+          "fit_deviation": 2.933
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "hierarchy-tree": {
+      "representative_template": "hierarchy-tree-tech-style-capsule-item",
+      "variant_count": 100,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.42,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.163
+        },
+        "5": {
+          "aspect_ratio": 5.74,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.952
+        },
+        "8": {
+          "aspect_ratio": 9.23,
+          "recommended_slot": "quad",
+          "fit_deviation": 2.139
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "list-column": {
+      "representative_template": "list-column-done-list",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.66,
+          "recommended_slot": "half",
+          "fit_deviation": 0.287
+        },
+        "5": {
+          "aspect_ratio": 1.11,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.063
+        },
+        "8": {
+          "aspect_ratio": 0.75,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.573
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "list-grid": {
+      "representative_template": "list-grid-badge-card",
+      "variant_count": 9,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 4.44,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.51
+        },
+        "5": {
+          "aspect_ratio": 2.66,
+          "recommended_slot": "full-tw",
+          "fit_deviation": 0.011
+        },
+        "8": {
+          "aspect_ratio": 1.9,
+          "recommended_slot": "full",
+          "fit_deviation": 0.216
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "list-pyramid": {
+      "representative_template": "list-pyramid-rounded-rect-node",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.77,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.282
+        },
+        "5": {
+          "aspect_ratio": 2.81,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.046
+        },
+        "8": {
+          "aspect_ratio": 4.17,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.418
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "list-row": {
+      "representative_template": "list-row-circular-progress",
+      "variant_count": 5,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.97,
+          "recommended_slot": "full",
+          "fit_deviation": 0.173
+        },
+        "5": {
+          "aspect_ratio": 3.23,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.099
+        },
+        "8": {
+          "aspect_ratio": 5.11,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.738
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "list-sector": {
+      "representative_template": "list-sector-simple",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.18
+        },
+        "5": {
+          "aspect_ratio": 1,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.18
+        },
+        "8": {
+          "aspect_ratio": 1,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.18
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "list-waterfall": {
+      "representative_template": "list-waterfall-badge-card",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 2.89,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.017
+        },
+        "5": {
+          "aspect_ratio": 3.27,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.112
+        },
+        "8": {
+          "aspect_ratio": 2.4,
+          "recommended_slot": "full",
+          "fit_deviation": 0.039
+        }
+      },
+      "stability": "moderate",
+      "drift": "heightens"
+    },
+    "list-zigzag": {
+      "representative_template": "list-zigzag-up-compact-card",
+      "variant_count": 4,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.81,
+          "recommended_slot": "full",
+          "fit_deviation": 0.276
+        },
+        "5": {
+          "aspect_ratio": 1.98,
+          "recommended_slot": "full",
+          "fit_deviation": 0.167
+        },
+        "8": {
+          "aspect_ratio": 2.28,
+          "recommended_slot": "full",
+          "fit_deviation": 0.013
+        }
+      },
+      "stability": "moderate",
+      "drift": "widens"
+    },
+    "quadrant": {
+      "representative_template": "quadrant-quarter-simple-card",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 0.92,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.283
+        },
+        "5": {
+          "aspect_ratio": 0.92,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.283
+        },
+        "8": {
+          "aspect_ratio": 0.92,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.283
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "relation-circle": {
+      "representative_template": "relation-circle-circular-progress",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.01,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.168
+        },
+        "5": {
+          "aspect_ratio": 0.94,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.255
+        },
+        "8": {
+          "aspect_ratio": 0.91,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.297
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "relation-dagre": {
+      "representative_template": "relation-dagre-flow-tb-simple-circle-node",
+      "variant_count": 14,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 0.43,
+          "recommended_slot": "twocol",
+          "fit_deviation": 1.744
+        },
+        "5": {
+          "aspect_ratio": 0.27,
+          "recommended_slot": "twocol",
+          "fit_deviation": 3.37
+        },
+        "8": {
+          "aspect_ratio": 0.17,
+          "recommended_slot": "twocol",
+          "fit_deviation": 5.941
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "relation-network": {
+      "representative_template": "relation-network-icon-badge",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 0.78,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.513
+        },
+        "5": {
+          "aspect_ratio": 0.68,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.735
+        },
+        "8": {
+          "aspect_ratio": 0.87,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.356
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "sequence-ascending": {
+      "representative_template": "sequence-ascending-steps",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.92,
+          "recommended_slot": "full",
+          "fit_deviation": 0.203
+        },
+        "5": {
+          "aspect_ratio": 2.42,
+          "recommended_slot": "full",
+          "fit_deviation": 0.048
+        },
+        "8": {
+          "aspect_ratio": 2.93,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.003
+        }
+      },
+      "stability": "moderate",
+      "drift": "widens"
+    },
+    "sequence-circle": {
+      "representative_template": "sequence-circle-arrows-indexed-card",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.22,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.034
+        },
+        "5": {
+          "aspect_ratio": 1.16,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.017
+        },
+        "8": {
+          "aspect_ratio": 1.13,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.044
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "sequence-circular": {
+      "representative_template": "sequence-circular-underline-text",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.34,
+          "recommended_slot": "half",
+          "fit_deviation": 0.039
+        },
+        "5": {
+          "aspect_ratio": 1.26,
+          "recommended_slot": "half",
+          "fit_deviation": 0.024
+        },
+        "8": {
+          "aspect_ratio": 1.26,
+          "recommended_slot": "half",
+          "fit_deviation": 0.024
+        }
+      },
+      "stability": "stable",
+      "drift": "flat"
+    },
+    "sequence-color": {
+      "representative_template": "sequence-color-snake-steps-horizontal-icon-line",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 2.98,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.014
+        },
+        "5": {
+          "aspect_ratio": 1.79,
+          "recommended_slot": "full",
+          "fit_deviation": 0.291
+        },
+        "8": {
+          "aspect_ratio": 1.28,
+          "recommended_slot": "half",
+          "fit_deviation": 0.008
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "sequence-cylinders": {
+      "representative_template": "sequence-cylinders-3d-simple",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.15,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.071
+        },
+        "5": {
+          "aspect_ratio": 2.38,
+          "recommended_slot": "full",
+          "fit_deviation": 0.03
+        },
+        "8": {
+          "aspect_ratio": 1.85,
+          "recommended_slot": "full",
+          "fit_deviation": 0.249
+        }
+      },
+      "stability": "moderate",
+      "drift": "heightens"
+    },
+    "sequence-filter": {
+      "representative_template": "sequence-filter-mesh-underline-text",
+      "variant_count": 2,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.42,
+          "recommended_slot": "half",
+          "fit_deviation": 0.101
+        },
+        "5": {
+          "aspect_ratio": 2.16,
+          "recommended_slot": "full",
+          "fit_deviation": 0.069
+        },
+        "8": {
+          "aspect_ratio": 3.26,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.109
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "sequence-funnel": {
+      "representative_template": "sequence-funnel-simple",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 2.06,
+          "recommended_slot": "full",
+          "fit_deviation": 0.121
+        },
+        "5": {
+          "aspect_ratio": 1.4,
+          "recommended_slot": "half",
+          "fit_deviation": 0.085
+        },
+        "8": {
+          "aspect_ratio": 0.94,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.255
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "sequence-horizontal": {
+      "representative_template": "sequence-horizontal-zigzag-simple-illus",
+      "variant_count": 6,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.46,
+          "recommended_slot": "half",
+          "fit_deviation": 0.132
+        },
+        "5": {
+          "aspect_ratio": 2.35,
+          "recommended_slot": "full",
+          "fit_deviation": 0.017
+        },
+        "8": {
+          "aspect_ratio": 3.69,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.255
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "sequence-interaction": {
+      "representative_template": "sequence-interaction-default-badge-card",
+      "variant_count": 36,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.3,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.122
+        },
+        "5": {
+          "aspect_ratio": 2.57,
+          "recommended_slot": "full-tw",
+          "fit_deviation": 0.023
+        },
+        "8": {
+          "aspect_ratio": 2.11,
+          "recommended_slot": "full",
+          "fit_deviation": 0.095
+        }
+      },
+      "stability": "moderate",
+      "drift": "heightens"
+    },
+    "sequence-mountain": {
+      "representative_template": "sequence-mountain-underline-text",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.32,
+          "recommended_slot": "half",
+          "fit_deviation": 0.023
+        },
+        "5": {
+          "aspect_ratio": 1.92,
+          "recommended_slot": "full",
+          "fit_deviation": 0.203
+        },
+        "8": {
+          "aspect_ratio": 2.82,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.043
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "sequence-pyramid": {
+      "representative_template": "sequence-pyramid-simple",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 2.38,
+          "recommended_slot": "full",
+          "fit_deviation": 0.03
+        },
+        "5": {
+          "aspect_ratio": 1.56,
+          "recommended_slot": "half",
+          "fit_deviation": 0.209
+        },
+        "8": {
+          "aspect_ratio": 1.03,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.146
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "sequence-roadmap": {
+      "representative_template": "sequence-roadmap-vertical-plain-text",
+      "variant_count": 7,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.85,
+          "recommended_slot": "full",
+          "fit_deviation": 0.249
+        },
+        "5": {
+          "aspect_ratio": 1.25,
+          "recommended_slot": "half",
+          "fit_deviation": 0.032
+        },
+        "8": {
+          "aspect_ratio": 0.84,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.405
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "sequence-snake": {
+      "representative_template": "sequence-snake-steps-compact-card",
+      "variant_count": 5,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 5.33,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.813
+        },
+        "5": {
+          "aspect_ratio": 2.62,
+          "recommended_slot": "full-tw",
+          "fit_deviation": 0.004
+        },
+        "8": {
+          "aspect_ratio": 1.73,
+          "recommended_slot": "full",
+          "fit_deviation": 0.335
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "sequence-stairs": {
+      "representative_template": "sequence-stairs-front-pill-badge",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.99,
+          "recommended_slot": "full",
+          "fit_deviation": 0.161
+        },
+        "5": {
+          "aspect_ratio": 1.37,
+          "recommended_slot": "half",
+          "fit_deviation": 0.062
+        },
+        "8": {
+          "aspect_ratio": 0.95,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.242
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "sequence-steps": {
+      "representative_template": "sequence-steps-badge-card",
+      "variant_count": 3,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 3.69,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.255
+        },
+        "5": {
+          "aspect_ratio": 6.15,
+          "recommended_slot": "quad",
+          "fit_deviation": 1.092
+        },
+        "8": {
+          "aspect_ratio": 9.85,
+          "recommended_slot": "quad",
+          "fit_deviation": 2.35
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "sequence-timeline": {
+      "representative_template": "sequence-timeline-done-list",
+      "variant_count": 5,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 2.35,
+          "recommended_slot": "full",
+          "fit_deviation": 0.017
+        },
+        "5": {
+          "aspect_ratio": 1.67,
+          "recommended_slot": "half",
+          "fit_deviation": 0.295
+        },
+        "8": {
+          "aspect_ratio": 1.16,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.017
+        }
+      },
+      "stability": "volatile",
+      "drift": "heightens"
+    },
+    "sequence-zigzag": {
+      "representative_template": "sequence-zigzag-steps-underline-text",
+      "variant_count": 4,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.47,
+          "recommended_slot": "half",
+          "fit_deviation": 0.14
+        },
+        "5": {
+          "aspect_ratio": 2.44,
+          "recommended_slot": "full",
+          "fit_deviation": 0.056
+        },
+        "8": {
+          "aspect_ratio": 3.91,
+          "recommended_slot": "quad",
+          "fit_deviation": 0.33
+        }
+      },
+      "stability": "volatile",
+      "drift": "widens"
+    },
+    "grid-matrix": {
+      "representative_template": "grid-matrix (recipe)",
+      "variant_count": 1,
+      "per_item_count": {
+        "5": {
+          "aspect_ratio": 1.685,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.429
+        }
+      },
+      "stability": "unknown",
+      "drift": "unknown",
+      "note": "僅1次實測(5 cells, cols=3)，非3/5/8完整量測，需累積更多資料點才可信賴"
+    },
+    "vertical-flow": {
+      "representative_template": "vertical-flow (recipe)",
+      "variant_count": 1,
+      "per_item_count": {
+        "3": {
+          "aspect_ratio": 1.745,
+          "recommended_slot": "twocol",
+          "fit_deviation": 0.48
+        }
+      },
+      "stability": "unknown",
+      "drift": "unknown",
+      "note": "僅1次實測(3 nodes)，非3/5/8完整量測，需累積更多資料點才可信賴"
+    }
+  }
+}

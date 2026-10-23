@@ -1,0 +1,23 @@
+{
+  "name": "ECCE 2026 Oral Presentation Template",
+  "template_file": "ECCE2026_Oral_Presentation_Template.pptx（大會提供，不隨本技能散佈；以 --template 指定）",
+  "slides": {"cover": 1, "content": 2, "closing": 4},
+  "title_style": "two-level",
+  "body": {"margin_x": 0.45, "top": 0.95, "bottom": 6.65},
+  "cover": {
+    "fields": {
+      "title": {"text": "PAPER TITLE SHOULD BE ADDED HERE", "box": [1.0, 2.0, 11.33, 1.25], "size": 36, "max_lines": 2},
+      "authors": {"text": "Author Name1", "box": [1.5, 3.45, 10.33, 0.55], "size": 24, "max_lines": 1},
+      "affiliation": {"text": "1 Author Affiliation", "box": [2.0, 4.1, 9.33, 1.2], "size": 20, "max_lines": 1}
+    }
+  },
+  "content": {
+    "title": {"text": "Section Title"},
+    "remove": [{"text": "Sample Text"}],
+    "footer": {"match": {"text": "Paper title should be added here"},
+               "format": "{paper_title}  -  {presenter}",
+               "box": [4.15, 6.82, 5.75, 0.62], "size": 12}
+  },
+  "closing": {"text": {"text": "Thank you"}},
+  "lint": {"header_bottom": 0.0, "rule_y": 7.5, "structural_colors": ["012B44", "E32628"]}
+}

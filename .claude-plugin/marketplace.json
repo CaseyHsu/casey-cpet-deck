@@ -1,0 +1,18 @@
+{
+  "name": "cpet-deck-marketplace",
+  "owner": { "name": "Casey" },
+  "description": "CPET / YS Lai Lab 實驗室簡報生成工具鏈",
+  "plugins": [
+    {
+      "name": "cpet-deck-plugin",
+      "description": "CPET 簡報生成產線：素材轉譯、簡報組裝、資訊圖生成、圖片前處理、定稿後管理、講稿與 Q&A",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/CaseyHsu/casey-cpet-deck.git",
+        "path": "plugins/cpet-deck-plugin",
+        "ref": "master"
+      },
+      "version": "1.3.1"
+    }
+  ]
+}
